@@ -110,13 +110,14 @@ public class AyudaProyect extends JFrame {
         setVisible(true);
     }
 
+    
     /**
      * Obtiene la respuesta correspondiente a una pregunta.
      *
      * @param pregunta La pregunta seleccionada.
      * @return La respuesta correspondiente a la pregunta.
      */
-    private String obtenerRespuesta(String pregunta) {
+    public static String obtenerRespuesta(String pregunta) {
         if (pregunta.equals("¿Cómo cambio mi contraseña?")) {
             return "Puedes cambiar tu contraseña desde la configuración de tu cuenta.";
         } else if (pregunta.equals("¿Cómo borro mi cuenta?")) {
@@ -141,5 +142,15 @@ public class AyudaProyect extends JFrame {
             return "No se encontró una respuesta para la pregunta seleccionada.";
         }
     }
+
+	public Object getOpenBtn() {
+//creado para testear
+		return null;
+	}
+
+	public Object getListaProy2() {
+		//creado para testear
+		return null;
+	}
     
 }

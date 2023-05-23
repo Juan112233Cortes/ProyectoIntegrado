@@ -122,4 +122,14 @@ public class AreasProyect extends JFrame {
 	public void hacerVisible() {
 		setVisible(true);
 	}
+
+	public Object getConsulItem() {
+//metodo creado para testear
+		return null;
+	}
+
+	public Object getAddItem() {
+		//metodo creado para testear
+		return null;
+	}
 }
