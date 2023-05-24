@@ -9,9 +9,12 @@ import control.AddProjBtnListener;
 import control.LoginBtnListener;
 import control.MenuListener;
 
+
 /**
- * @author Paula Moure
- * Ventana para añadir proyectos
+ * Ventana para añadir proyectos.
+ * Esta clase representa una ventana Swing que permite al usuario agregar proyectos.
+ * Los componentes de la ventana incluyen etiquetas, campos de texto, un botón y un menú.
+ * También se proporcionan métodos para obtener y establecer los valores de los componentes.
  */
 public class AddProyect extends JFrame {
 	ImageIcon pacImg = new ImageIcon("img/pacTrans.png");
@@ -43,7 +46,12 @@ public class AddProyect extends JFrame {
     JComboBox<String> res9 = new JComboBox<>();
 	JButton addBtn;
 	
+	/**
+	 * Constructor de la clase AddProyect.
+	 * Crea una nueva instancia de la ventana "Añadir Proyecto" y configura sus propiedades.
+	 */
 	public AddProyect() {
+		// Configuración de la ventana
 		super("Añadir Proyecto");
 		getContentPane().setBackground(new Color(195, 219, 255));
 		inicializarComponentes();
@@ -179,16 +187,20 @@ public class AddProyect extends JFrame {
         setSize(666, 479);
 		setLocationRelativeTo(null);
 	}
-	
+	/**
+	 * Configura un objeto MenuListener para manejar los eventos del menú
+	 * 
+	 * @param listener el objeto MenuListener que manejará los eventos del menú
+	 */
 	public void setListener(MenuListener listener) {
-		consulItem.addActionListener(listener);
-		addItem.addActionListener(listener);
-		delItem.addActionListener(listener);
-		modItem.addActionListener(listener);
-		areasM.addActionListener(listener);
-		alumnosM.addActionListener(listener);
-    }
-	
+	    consulItem.addActionListener(listener);
+	    addItem.addActionListener(listener);
+	    delItem.addActionListener(listener);
+	    modItem.addActionListener(listener);
+	    areasM.addActionListener(listener);
+	    alumnosM.addActionListener(listener);
+	}
+
 	/**
 	 * Hace toda la página visible
 	 */

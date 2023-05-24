@@ -20,7 +20,10 @@ public class AccesoBBDD {
 	private int area;
 	
 	Connection conexion = null;
-
+	/**
+     * Obtiene una conexión a la base de datos.
+     * @return La conexión establecida.
+     */
 	public Connection getConexion() {
 		conexion = null;
 
@@ -35,7 +38,10 @@ public class AccesoBBDD {
 		}
 		return conexion;
 	}
-
+	/**
+     * Comprueba si existe un usuario con el nombre especificado en la base de datos.
+     * @return true si el nombre existe, false en caso contrario.
+     */
 	//Login page
 	public boolean comprobarNombre() {
 		check = false;
@@ -58,7 +64,9 @@ public class AccesoBBDD {
 		}
 		return check;
 	}
-
+	/**
+     * Registra un nuevo usuario en la base de datos.
+     */
 	public void register() {
 		try {
 			conexion = DriverManager.getConnection(url, user, pwd);
@@ -73,7 +81,10 @@ public class AccesoBBDD {
 			e.printStackTrace();
 		}
 	}
-
+	 /**
+     * Realiza el proceso de inicio de sesión.
+     * @return true si el inicio de sesión es exitoso, false en caso contrario.
+     */
 	public boolean login() {
 		boolean check = false;
 		try {
@@ -121,7 +132,11 @@ public class AccesoBBDD {
 		}
 		return check;
 	}
-	
+	 /**
+     * Carga los proyectos integradores que coinciden con el criterio de búsqueda especificado.
+     * @param buscar Criterio de búsqueda para los proyectos.
+     * @return Una lista de proyectos integradores que coinciden con el criterio de búsqueda.
+     */
 	//Consultar project page	
 	public ArrayList<ProyectoIntegrador> cargarProyectos(String buscar) {
         		ArrayList<ProyectoIntegrador> proyectos = new ArrayList();
@@ -150,7 +165,10 @@ public class AccesoBBDD {
             }
             return proyectos;
 	 }
-	
+	 /**
+     * Agrega un nuevo proyecto integrador a la base de datos.
+     * @return true si el proyecto se agrega correctamente, false en caso contrario.
+     */
 	//Add project page
 	public boolean proyectoNuevo(){
 		boolean check = false;
@@ -172,7 +190,10 @@ public class AccesoBBDD {
 		}
 		return check;
 	}
-	
+	/**
+     * Comprueba si ya existe un proyecto con el mismo nombre en la base de datos.
+     * @return true si el proyecto ya existe, false en caso contrario.
+     */
 	public boolean proyectoRepetido(){
 		boolean check = false;
 		try {
@@ -187,7 +208,11 @@ public class AccesoBBDD {
 		}
 		return check;
 	}
-
+	/**
+     * Elimina los proyectos integradores que coinciden con el criterio de búsqueda especificado.
+     * @param buscar Criterio de búsqueda para los proyectos a eliminar.
+     * @return Una lista de proyectos integradores que coinciden con el criterio de búsqueda y serán eliminados.
+     */
 	//Delete project page
 	public ArrayList<ProyectoIntegrador> deleteProyects(String buscar) {
 		ArrayList<ProyectoIntegrador> proyectos = new ArrayList();
@@ -220,97 +245,189 @@ public class AccesoBBDD {
 	/**
 	 * GETTERS Y SETTERS
 	 */
-	public String getUserAlumno() {
-		return userAlumno;
-	}
-	
-	public void setUserAlumno(String userAlumno) {
-		this.userAlumno = userAlumno;
-	}
-	
-	public String getUsrname() {
-		return usrname;
-	}
+	/**
+     * Obtiene el valor del atributo userAlumno.
+     * @return El valor de userAlumno.
+     */
+    public String getUserAlumno() {
+        return userAlumno;
+    }
 
-	public void setUsrname(String usrname) {
-		this.usrname = usrname;
-	}
+    /**
+     * Establece el valor del atributo userAlumno.
+     * @param userAlumno El nuevo valor para userAlumno.
+     */
+    public void setUserAlumno(String userAlumno) {
+        this.userAlumno = userAlumno;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    /**
+     * Obtiene el valor del atributo usrname.
+     * @return El valor de usrname.
+     */
+    public String getUsrname() {
+        return usrname;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    /**
+     * Establece el valor del atributo usrname.
+     * @param usrname El nuevo valor para usrname.
+     */
+    public void setUsrname(String usrname) {
+        this.usrname = usrname;
+    }
 
-	public boolean isCheck() {
-		return check;
-	}
+    /**
+     * Obtiene el valor del atributo password.
+     * @return El valor de password.
+     */
+    public String getPassword() {
+        return password;
+    }
 
-	public String getId() {
-		return id;
-	}
+    /**
+     * Establece el valor del atributo password.
+     * @param password El nuevo valor para password.
+     */
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    /**
+     * Obtiene el valor del atributo check.
+     * @return El valor de check.
+     */
+    public boolean isCheck() {
+        return check;
+    }
 
-	public String getNombre() {
-		return nombre;
-	}
+    /**
+     * Obtiene el valor del atributo id.
+     * @return El valor de id.
+     */
+    public String getId() {
+        return id;
+    }
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+    /**
+     * Establece el valor del atributo id.
+     * @param id El nuevo valor para id.
+     */
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public String getUrlP() {
-		return urlP;
-	}
+    /**
+     * Obtiene el valor del atributo nombre.
+     * @return El valor de nombre.
+     */
+    public String getNombre() {
+        return nombre;
+    }
 
-	public void setUrlP(String urlP) {
-		this.urlP = urlP;
-	}
+    /**
+     * Establece el valor del atributo nombre.
+     * @param nombre El nuevo valor para nombre.
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
-	public String getNota() {
-		return nota;
-	}
+    /**
+     * Obtiene el valor del atributo urlP.
+     * @return El valor de urlP.
+     */
+    public String getUrlP() {
+        return urlP;
+    }
 
-	public void setNota(String nota) {
-		this.nota = nota;
-	}
+    /**
+     * Establece el valor del atributo urlP.
+     * @param urlP El nuevo valor para urlP.
+     */
+    public void setUrlP(String urlP) {
+        this.urlP = urlP;
+    }
 
-	public String getFecha() {
-		return fecha;
-	}
+    /**
+     * Obtiene el valor del atributo nota.
+     * @return El valor de nota.
+     */
+    public String getNota() {
+        return nota;
+    }
 
-	public void setFecha(String fecha) {
-		this.fecha = fecha;
-	}
+    /**
+     * Establece el valor del atributo nota.
+     * @param nota El nuevo valor para nota.
+     */
+    public void setNota(String nota) {
+        this.nota = nota;
+    }
 
-	public String getCurso() {
-		return curso;
-	}
+    /**
+     * Obtiene el valor del atributo fecha.
+     * @return El valor de fecha.
+     */
+    public String getFecha() {
+        return fecha;
+    }
 
-	public void setCurso(String curso) {
-		this.curso = curso;
-	}
+    /**
+     * Establece el valor del atributo fecha.
+     * @param fecha El nuevo valor para fecha.
+     */
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
 
-	public String getGrupo() {
-		return grupo;
-	}
+    /**
+     * Obtiene el valor del atributo curso.
+     * @return El valor de curso.
+     */
+    public String getCurso() {
+        return curso;
+    }
 
-	public void setGrupo(String grupo) {
-		this.grupo = grupo;
-	}
+    /**
+     * Establece el valor del atributo curso.
+     * @param curso El nuevo valor para curso.
+     */
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
 
-	public int getArea() {
-		return area;
-	}
+    /**
+     * Obtiene el valor del atributo grupo.
+     * @return El valor de grupo.
+     */
+    public String getGrupo() {
+        return grupo;
+    }
 
-	public void setArea(int area) {
-		this.area = area;
-	}
+    /**
+     * Establece el valor del atributo grupo.
+     * @param grupo El nuevo valor para grupo.
+     */
+    public void setGrupo(String grupo) {
+        this.grupo = grupo;
+    }
+
+    /**
+     * Obtiene el valor del atributo area.
+     * @return El valor de area.
+     */
+    public int getArea() {
+        return area;
+    }
+
+    /**
+     * Establece el valor del atributo area.
+     * @param area El nuevo valor para area.
+     */
+    public void setArea(int area) {
+        this.area = area;
+    }
 
 	public void setCheck(boolean check) {
 		this.check = check;

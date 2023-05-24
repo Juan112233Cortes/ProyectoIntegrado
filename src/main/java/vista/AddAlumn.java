@@ -13,18 +13,18 @@ import modelo.ProyectoIntegrador;
  * Clase que representa la ventana de editar alumnos.
  */
 public class AddAlumn extends JFrame {
-    private JLabel numExpLbl;
-    private JLabel codigoLbl;
-    private JLabel nombreLbl;
-    private JLabel apellidosLbl;
-    private JTextField numExpTxtF;
-    private JTextField codigoTxtF;
-    private JTextField nombreTxtF;
-    private JTextField apellidosTxtF;
-    private JList<String> alumnList;
-    private ArrayList<ProyectoIntegrador> listaAlumnos;
-    private DefaultListModel<String> listaAlumn;
-    private JButton saveButton;
+    private JLabel numExpLbl; // Etiqueta para el número de expediente
+    private JLabel codigoLbl; // Etiqueta para el código
+    private JLabel nombreLbl; // Etiqueta para el nombre
+    private JLabel apellidosLbl; // Etiqueta para los apellidos
+    private JTextField numExpTxtF; // Campo de texto para el número de expediente
+    private JTextField codigoTxtF; // Campo de texto para el código
+    private JTextField nombreTxtF; // Campo de texto para el nombre
+    private JTextField apellidosTxtF; // Campo de texto para los apellidos
+    private JList<String> alumnList; // Lista de alumnos
+    private ArrayList<ProyectoIntegrador> listaAlumnos; // Lista de alumnos
+    private DefaultListModel<String> listaAlumn; // Modelo de lista para los alumnos
+    private JButton saveButton; // Botón para guardar la edición
 
     /**
      * Constructor de la clase AddAlumn.
@@ -33,7 +33,7 @@ public class AddAlumn extends JFrame {
     public AddAlumn() {
         super("Editar Alumnos");
         listaAlumnos = new ArrayList<ProyectoIntegrador>();
-        getContentPane().setBackground(new Color(195, 219, 255));
+        getContentPane().setBackground(new Color(195, 219, 255)); // Establece el color de fondo
         inicializarComponentes();
     }
 
@@ -41,9 +41,10 @@ public class AddAlumn extends JFrame {
      * Inicializa los componentes de la ventana.
      */
     public void inicializarComponentes() {
-        getContentPane().setLayout(null);
-        alumnList = new JList<>(listaAlumn);
+        getContentPane().setLayout(null); // Establece un diseño nulo para colocar los componentes manualmente
+        alumnList = new JList<>(listaAlumn); // Inicializa la lista de alumnos con el modelo
 
+        // Inicializa las etiquetas y las coloca en posiciones específicas
         numExpLbl = new JLabel("Nº expediente: ");
         numExpLbl.setBounds(86, 110, 73, 20);
         getContentPane().add(numExpLbl);
@@ -60,6 +61,7 @@ public class AddAlumn extends JFrame {
         apellidosLbl.setBounds(86, 335, 73, 20);
         getContentPane().add(apellidosLbl);
 
+        // Inicializa los campos de texto y los coloca en posiciones específicas
         numExpTxtF = new JTextField();
         numExpTxtF.setBounds(221, 110, 107, 20);
         getContentPane().add(numExpTxtF);
@@ -76,6 +78,7 @@ public class AddAlumn extends JFrame {
         apellidosTxtF.setBounds(221, 185, 107, 20);
         getContentPane().add(apellidosTxtF);
 
+        // Inicializa y configura el botón de guardar
         CloseWindowBtnListener escuchador = new CloseWindowBtnListener(null, null, this);
         saveButton.addActionListener(escuchador);
         getContentPane().add(saveButton);
@@ -89,7 +92,7 @@ public class AddAlumn extends JFrame {
         setVisible(true);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(666, 479);
-		setLocationRelativeTo(null);
+        setLocationRelativeTo(null); // Centra la ventana en la pantalla
     }
 
     /**
@@ -98,7 +101,7 @@ public class AddAlumn extends JFrame {
      */
     public void showAlumn(ArrayList<ProyectoIntegrador> lista) {
         for (ProyectoIntegrador a : lista) {
-            listaAlumn.addElement(a.toString());
+            listaAlumn.addElement(a.toString()); // Agrega cada alumno al modelo de lista
         }
     }
 
@@ -109,9 +112,8 @@ public class AddAlumn extends JFrame {
         setVisible(true);
     }
 
-    /**
-     * GETTERS Y SETTERS
-     */
+    // Getters y Setters para los componentes de la ventana
+
     public JLabel getNumExpLbl() {
         return numExpLbl;
     }

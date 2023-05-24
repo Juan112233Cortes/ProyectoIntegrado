@@ -17,15 +17,20 @@ public class Main extends JFrame{
 	}
 	
 	private void init() {
+        // Crear una instancia de VentanaPrincipal
+
 		cover = new VentanaPrincipal();
+        // Agregar la ventana principal al JLayeredPane
+
 		bg.add(cover);
 	}
 
 	public static void main(String[] args) {
 		java.awt.EventQueue.invokeLater(new Runnable() {
+            // Crear una instancia de la clase Main
+
 			public void run() {
 				VentanaPrincipal ventana = new VentanaPrincipal();
-//				ConsulProyect ventana = new ConsulProyect();
 		        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				ventana.setVisible(true);
 			}

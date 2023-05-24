@@ -4,7 +4,9 @@ import java.awt.Color;
 import java.awt.Cursor;
 import javax.swing.*;
 import control.CloseWindowBtnListener;
-
+/**
+ * Clase que representa la ventana de consulta de proyecto.
+ */
 public class OpenConsulProy extends JFrame {
 	ImageIcon pacImg = new ImageIcon("img/pacTrans.png");
 	JLabel imgLbl = new JLabel(pacImg);
@@ -25,13 +27,18 @@ public class OpenConsulProy extends JFrame {
     private JLabel grupoTxtF;
     private JButton closeButton;
     String nombreProyecto;
-    
+    /**
+     * Constructor de la clase OpenConsulProy.
+     * Crea una nueva instancia de la ventana de consulta de proyecto.
+     */
     public OpenConsulProy() {
     	super("Consultar Proyecto");
 		getContentPane().setBackground(new Color(195, 219, 255));
     	inicializarComponentes();
     }
-    
+    /**
+     * Inicializa los componentes de la ventana.
+     */
     public void inicializarComponentes() {
 		getContentPane().setLayout(null);
 
@@ -104,134 +111,140 @@ public class OpenConsulProy extends JFrame {
         setSize(666, 479);
 		setLocationRelativeTo(null);    }
     
-	/**
-	 * Hace toda la página visible
-	 */
-	public void hacerVisible() {
-		setVisible(true);
-	}
+    
+    /**
+     * Hace toda la página visible.
+     */
+    public void hacerVisible() {
+        setVisible(true);
+    }
 
-	/**
-	 * GETTERS Y SETTERS
-	 */
-	public JLabel getIdLbl() {
-		return idLbl;
-	}
+    /**
+     * Obtiene la etiqueta de ID.
+     * @return La etiqueta de ID.
+     */
+    public JLabel getIdLbl() {
+        return idLbl;
+    }
 
-	public void setIdLbl(JLabel idLbl) {
-		this.idLbl = idLbl;
-	}
+    /**
+     * Establece la etiqueta de ID.
+     * @param idLbl La etiqueta de ID a establecer.
+     */
+    public void setIdLbl(JLabel idLbl) {
+        this.idLbl = idLbl;
+    }
 
-	public JLabel getNombreProyLbl() {
-		return nombreProyLbl;
-	}
+    /**
+     * Obtiene la etiqueta de nombre del proyecto.
+     * @return La etiqueta de nombre del proyecto.
+     */
+    public JLabel getNombreProyLbl() {
+        return nombreProyLbl;
+    }
 
-	public void setNombreProyLbl(JLabel nombreProyLbl) {
-		this.nombreProyLbl = nombreProyLbl;
-	}
+    /**
+     * Establece la etiqueta de nombre del proyecto.
+     * @param nombreProyLbl La etiqueta de nombre del proyecto a establecer.
+     */
+    public void setNombreProyLbl(JLabel nombreProyLbl) {
+        this.nombreProyLbl = nombreProyLbl;
+    }
 
-	public JLabel getUrlLbl() {
-		return urlLbl;
-	}
+    /**
+     * Obtiene la etiqueta de URL.
+     * @return La etiqueta de URL.
+     */
+    public JLabel getUrlLbl() {
+        return urlLbl;
+    }
 
-	public void setUrlLbl(JLabel urlLbl) {
-		this.urlLbl = urlLbl;
-	}
+    /**
+     * Establece la etiqueta de URL.
+     * @param urlLbl La etiqueta de URL a establecer.
+     */
+    public void setUrlLbl(JLabel urlLbl) {
+        this.urlLbl = urlLbl;
+    }
 
-	public JLabel getNotaLbl() {
-		return notaLbl;
-	}
+    /**
+     * Obtiene la etiqueta de nota.
+     * @return La etiqueta de nota.
+     */
+    public JLabel getNotaLbl() {
+        return notaLbl;
+    }
 
-	public void setNotaLbl(JLabel notaLbl) {
-		this.notaLbl = notaLbl;
-	}
+    /**
+     * Establece la etiqueta de nota.
+     * @param notaLbl La etiqueta de nota a establecer.
+     */
+    public void setNotaLbl(JLabel notaLbl) {
+        this.notaLbl = notaLbl;
+    }
 
-	public JLabel getFechaLbl() {
-		return fechaLbl;
-	}
+    /**
+     * Obtiene la etiqueta de fecha.
+     * @return La etiqueta de fecha.
+     */
+    public JLabel getFechaLbl() {
+        return fechaLbl;
+    }
 
-	public void setFechaLbl(JLabel fechaLbl) {
-		this.fechaLbl = fechaLbl;
-	}
+    /**
+     * Establece la etiqueta de fecha.
+     * @param fechaLbl La etiqueta de fecha a establecer.
+     */
+    public void setFechaLbl(JLabel fechaLbl) {
+        this.fechaLbl = fechaLbl;
+    }
 
-	public JLabel getCursoLbl() {
-		return cursoLbl;
-	}
+    /**
+     * Obtiene la etiqueta de curso.
+     * @return La etiqueta de curso.
+     */
+    public JLabel getCursoLbl() {
+        return cursoLbl;
+    }
 
-	public void setCursoLbl(JLabel cursoLbl) {
-		this.cursoLbl = cursoLbl;
-	}
+    /**
+     * Establece la etiqueta de curso.
+     * @param cursoLbl La etiqueta de curso a establecer.
+     */
+    public void setCursoLbl(JLabel cursoLbl) {
+        this.cursoLbl = cursoLbl;
+    }
 
-	public JLabel getGrupoLbl() {
-		return grupoLbl;
-	}
+    /**
+     * Obtiene la etiqueta de grupo.
+     * @return La etiqueta de grupo.
+     */
+    public JLabel getGrupoLbl() {
+        return grupoLbl;
+    }
 
-	public void setGrupoLbl(JLabel grupoLbl) {
-		this.grupoLbl = grupoLbl;
-	}
+    /**
+     * Establece la etiqueta de grupo.
+     * @param grupoLbl La etiqueta de grupo a establecer.
+     */
+    public void setGrupoLbl(JLabel grupoLbl) {
+        this.grupoLbl = grupoLbl;
+    }
 
-//	public JTextField getIdTxtF() {
-//		return idTxtF;
-//	}
-//
-//	public void setIdTxtF(JTextField idTxtF) {
-//		this.idTxtF = idTxtF;
-//	}
-//
-//	public JTextField getNombreProyTxtF() {
-//		return nombreProyTxtF;
-//	}
-//
-//	public void setNombreProyTxtF(JTextField nombreProyTxtF) {
-//		this.nombreProyTxtF = nombreProyTxtF;
-//	}
-//
-//	public JTextField getUrlTxtF() {
-//		return urlTxtF;
-//	}
-//
-//	public void setUrlTxtF(JTextField urlTxtF) {
-//		this.urlTxtF = urlTxtF;
-//	}
-//
-//	public JTextField getNotaTxtF() {
-//		return notaTxtF;
-//	}
-//
-//	public void setNotaTxtF(JTextField notaTxtF) {
-//		this.notaTxtF = notaTxtF;
-//	}
-//
-//	public JTextField getFechaTxtF() {
-//		return fechaTxtF;
-//	}
-//
-//	public void setFechaTxtF(JTextField fechaTxtF) {
-//		this.fechaTxtF = fechaTxtF;
-//	}
-//
-//	public JTextField getCursoTxtF() {
-//		return cursoTxtF;
-//	}
-//
-//	public void setCursoTxtF(JTextField cursoTxtF) {
-//		this.cursoTxtF = cursoTxtF;
-//	}
-//
-//	public JTextField getGrupoTxtF() {
-//		return grupoTxtF;
-//	}
-//
-//	public void setGrupoTxtF(JTextField grupoTxtF) {
-//		this.grupoTxtF = grupoTxtF;
-//	}
+    /**
+     * Obtiene el botón de guardar.
+     * @return El botón de guardar.
+     */
+    public JButton getSaveButton() {
+        return closeButton;
+    }
 
-	public JButton getSaveButton() {
-		return closeButton;
-	}
+    /**
+     * Establece el botón de guardar.
+     * @param saveButton El botón de guardar a establecer.
+     */
+    public void setSaveButton(JButton saveButton) {
+        this.closeButton = saveButton;
+    }
 
-	public void setSaveButton(JButton saveButton) {
-		this.closeButton = saveButton;
-	}
-	
 }
