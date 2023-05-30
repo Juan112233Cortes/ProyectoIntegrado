@@ -46,4 +46,8 @@ https://view.genial.ly/6464b1aa8a545c0019562d4f/interactive-content-proyectointe
 
 ![Manual](https://github.com/ameliamariacocalopez/ProyectoIntegrador/blob/main/Manual%20del%20Usuario.pdf)
 
+# MEMORIA DEL PROYECTO
+
+![Memoria](https://github.com/ameliamariacocalopez/ProyectoIntegrador/blob/main/MemoriaProyectoIntegrador.pdf)
+
 ![Aqui tenemos el SQL ](https://github.com/ameliamariacocalopez/ProyectoIntegrador/blob/main/base_datos/Basededatos.sql)
