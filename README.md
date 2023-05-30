@@ -3,6 +3,13 @@
 Enlace de la persentación
 https://view.genial.ly/6464b1aa8a545c0019562d4f/interactive-content-proyectointegrador
 
+Entidad Relacion
+
+![](https://github.com/ameliamariacocalopez/ProyectoIntegrador/blob/main/base_datos/EntidadRelacion.png)
+
+Modelo Relacional
+
+![](https://github.com/ameliamariacocalopez/ProyectoIntegrador/blob/main/base_datos/ModeloRelacional.png)
 
 Parte 1, de la tabla de Normalización
 
