@@ -9,7 +9,7 @@ Entidad Relacion
 
 Modelo Relacional
 
-![](https://github.com/ameliamariacocalopez/ProyectoIntegrador/blob/main/base_datos/ModeloRelacional.png)
+![](https://github.com/ameliamariacocalopez/ProyectoIntegrador/blob/main/base_datos/ModeloRelacional.jpg)
 
 Parte 1, de la tabla de Normalización
 
